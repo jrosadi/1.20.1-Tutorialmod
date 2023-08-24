@@ -1,6 +1,7 @@
 package net.julian.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.julian.tutorialmod.block.ModBlocks;
 import net.julian.tutorialmod.item.ModCreativeModeTabs;
 import net.julian.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -39,6 +40,7 @@ public class TutorialMod
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
