@@ -23,10 +23,12 @@ public class ModCreativeModeTabs {
                             .displayItems((pParameters, pOutput) -> {
                                 pOutput.accept(ModItems.SAPPHIRE.get());
                                 pOutput.accept(ModItems.RAW_SAPPHIRE.get());
+                                pOutput.accept(ModItems.METAL_DETECTOR.get());
 
                                 pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                                 pOutput.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
                                 pOutput.accept(ModBlocks.SAPPHIRE_ORE.get());
+                                pOutput.accept(ModBlocks.SOUND_BLOCK.get());
                             }).build());
     public static void register(IEventBus eventBus){
         CREATIVE_MODE_TABS.register(eventBus);
