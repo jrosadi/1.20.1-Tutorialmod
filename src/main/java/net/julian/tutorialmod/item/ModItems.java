@@ -1,6 +1,8 @@
 package net.julian.tutorialmod.item;
 
 import net.julian.tutorialmod.TutorialMod;
+import net.julian.tutorialmod.item.custom.ForceWandItem;
+import net.julian.tutorialmod.item.custom.FuelItem;
 import net.julian.tutorialmod.item.custom.MetalDetectorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,6 +23,12 @@ public class ModItems {
             ()-> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             ()-> new MetalDetectorItem(new Item.Properties().durability(100)));
+
+    public static final RegistryObject<Item> FORCE_WAND = ITEMS.register("force_wand",
+            ()-> new ForceWandItem(new Item.Properties().durability(100)));
+
+    public static final RegistryObject<Item> PINE_CONE = ITEMS.register("pine_cone",
+            ()-> new FuelItem(new Item.Properties(), 400));
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
